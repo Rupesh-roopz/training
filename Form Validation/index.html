@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Form Validations</title>
+</head>
+<body>
+<!--Built-in form validation-->
+<form >
+
+    <div class="firstName">
+        <label for="fname">First Name</label>
+    <input type="text" placeholder="ex:John" id="fname" required><br>
+    </div>
+
+    <div class="lastName"><label for="lastName">Last Name </label>
+        <input type="text" placeholder="ex:wick" id="lastName" required>
+    </div>
+
+    <div class="age"><label for="ageI">Age</label>
+        <input type="number" id="age" max="100" min="18" ><br>
+    </div>
+
+    <div class="gender">
+        <label for="gender">Gender</label><br>
+    <input type="radio" name="gender" id="gender" required>
+    <label for="g1">Male</label>
+    <input type="radio" name="gender" id="gender" required>
+    <label for="g1">Female</label><br>
+    </div>
+    
+    <div class="email"> <label for="emailID">Email</label>
+        <input type="email" id="emailID" required><br></div>
+    
+
+    <button type="submit" >submit</button>
+
+</form>
+<template id="myTemplate">
+    <p>this field is required</p>
+</template>
+<script src="./index.js"></script>
+</body>
+</html>
