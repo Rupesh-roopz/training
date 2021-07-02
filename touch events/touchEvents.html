@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Touch Events</title>
+</head>
+<body>
+    <canvas id="canvas" style="border:solid black 2px;">
+
+    </canvas>
+</body>
+<script>
+    function start(){
+        console.log("canvas is touched");
+    }
+    function move(){
+        console.log("touch is moving")
+    }
+    function end(){
+        console.log("touch is ended")
+    }
+    function startUp(){
+        var canvas=document.getElementById("canvas");
+        canvas.addEventListener("touchstart",start);
+        canvas.addEventListener("touchmove",move);
+        canvas.addEventListener("touchend",end);
+    }
+    document.addEventListener('DOMContentLoaded',startUp);
+    
+</script>
+</html>

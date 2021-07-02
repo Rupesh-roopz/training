@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button onclick="submit()">Send</button>
+    <div id="textArea"></div>
+</body>
+<script>
+
+var textArea= document.getElementById('textArea');
+const connection=new WebSocket("ws://localhost:5002");
+connection.onopen=()=>{
+    console.log("Connected")
+}
+connection.onmessage=(event)=>{
+    console.log(event)
+    textArea.innerHTML+=event.data+"<br>";
+}
+
+submit=()=>{
+    var input=document.getElementById('input').value;
+    connection.send(input);
+}
+
+
+</script>
+</html>

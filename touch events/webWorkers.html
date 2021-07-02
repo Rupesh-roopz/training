@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web Workers</title>
+</head>
+<body>
+    <input type="text" name="" id="firstNumber" placeholder="first number">
+    <input type="text" name="" id="secondNumber" placeholder="second number">
+    <button onclick="send()">Submit</button>
+</body>
+<script>
+    var firstNumber=document.getElementById("firstNumber");
+    var secondNumber=document.getElementById("secondNumber");
+    function send(){
+        if(window.Worker){
+            var myWorker=new Worker("myWorker.js");
+            myWorker.postMessage([firstNumber.value,secondNumber.value]);
+            myWorker.onmessage=function(e){
+                console.log(event.data);
+            }
+        }
+    }
+
+    var inputNodes=document.querySelectorAll("input")[0];
+    console.log(inputNodes);
+
+
+</script>
+</html>

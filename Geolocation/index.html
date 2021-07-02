@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id = "find-me" onclick="sucess()">Show my location</button><br/>
+<p id = "status"></p>
+<a id = "map-link" target="_blank"></a>
+</body>
+<script>
+/*
+if(!navigator.geolocation)
+{
+    console.log("no")
+}
+else{
+    navigator.geolocation.getCurrentPosition(sucess,error);
+    function sucess(position){
+        var lat=position.coords.latitude;
+        var lon=position.coords.longitude;
+        console.log("longitude :"+lon + " "+"latitude"+lat);
+    }
+    function error(){
+        console.log("cant able to retrive coordinates")
+    }
+}
+*/
+//Geolocation.watchPosition
+
+navigator.geolocation.watchPosition(sucess_callback)
+var target;
+function sucess_callback(pos){
+ var latt=pos.coords.latitude;
+ var long=pos.coords.longitude;
+ if(latt==target.latitude && long==target.longitude){
+     console.log("congratulations you reached the destiniation")
+     navigator.geolocation.clearWatch();
+ }else{
+     console.log("not reached destinaion");
+ }
+
+}
+target={
+    latitude:0,
+    longitude:0
+}
+</script>
+</html>

@@ -1,0 +1,12 @@
+p::first-line{
+    color: red;
+}
+p::first-letter{
+    text-transform: uppercase;
+}
+a:visited{
+    color: darkgreen;
+}
+a:hover{
+    color: red;
+}

@@ -1,0 +1,36 @@
+.sample1{
+    background-image: url('images/logo-quantum.9c5e96634f92.png');
+    background-size:150px ;
+    width: 300px;
+    height: 300px;
+    border: 2px solid orange;
+ 
+}
+.sample2{
+    background-image: url('images/logo-quantum.9c5e96634f92.png');
+    background-size:300px 150px ;
+    width: 300px;
+    height: 300px;
+    border: 2px solid orange;
+ 
+}
+.sample3{
+    background-image: url('images/logo-quantum.9c5e96634f92.png');
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    color: pink;
+    resize: both;
+    overflow:scroll;
+}
+.sample4{
+    background-image: url('images/logo-quantum.9c5e96634f92.png');
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    color: pink;
+    resize: both;
+    overflow:scroll;
+}
